@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  background: var(--color-bg);
+}
+a{
+  color: unset;
+  text-decoration: none;
+}
+.gradient_bg{
+   /* ff 3.6+ */
+   background: -moz-radial-gradient(circle at 10% 30%, rgba(12, 38, 46, 1) 32%, rgba(13, 13, 12, 1) 87%);
+
+   /* safari 5.1+,chrome 10+ */
+   background: -webkit-radial-gradient(circle at 10% 30%, rgba(12, 38, 46, 1) 32%, rgba(13, 13, 12, 1) 87%);
+
+   /* opera 11.10+ */
+   background: -o-radial-gradient(circle at 10% 30%, rgba(12, 38, 46, 1) 32%, rgba(13, 13, 12, 1) 87%);
+
+   /* ie 10+ */
+   background: -ms-radial-gradient(circle at 10% 30%, rgba(12, 38, 46, 1) 32%, rgba(13, 13, 12, 1) 87%);
+
+   /* global 92%+ browsers support */
+   background: radial-gradient(circle at 10% 30%, rgba(12, 38, 46, 1) 32%, rgba(13, 13, 12, 1) 87%);
+}
+.gradient__text{
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section__pading{
+  padding: 4rem 6rem;
+}
+.section__margin{
+  margin: 4rem 6rem;
+}
+.slide-fwd-center {
+	-webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ @-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ⁡⁢⁣⁡⁢⁣⁢For Tablet Medium Screen Devices⁡ ⁡*/
+@media screen and (max-width: 700px) {
+  .section__pading{
+    padding: 4rem 6rem;
   }
-  to {
-    transform: rotate(360deg);
+  .section__margin{
+    margin: 4rem;
   }
 }
+
+/* ⁡⁢⁣⁢For Mobo Devices⁡ */
+@media screen and (max-width: 550px) {
+  .section__pading{
+    padding: 4rem 2rem;
+  }
+  .section__margin{
+    margin: 4rem;
+  }
+}
+
+        
